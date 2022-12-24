@@ -97,6 +97,57 @@ li {
   list-style-type: none;
 }
 
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
+
+@font-face{
+  font-family:Cyborg;
+  src:local("Cyborg"), url(../robotic-cyborg/Robotic\ Cyborg.ttf) format("truetype")
+}
+@font-face{
+  font-family:ExoSpace;
+  src:local("ExoSpace"), url(../robotic-cyborg/Exo-Space-DEMO.ttf) format("truetype")
+}
+
+:root {
+  --primary-color: #10e956;
+  --black-color: #060810;
+  --white-color: #fff;
+}
+
+/* common styling  */
+.flex {
+  display: flex;
+}
+
+body {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.heading {
+  width: max-content;
+  padding: 14px 30px;
+  margin: 0 auto 40px ;
+  border-radius: 12px;
+  background: #12141d;
+  color: #14e956;
+  font-size: 22px;
+  font-family: Cyborg;
+  font-weight: 900;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  box-shadow: inset 0 0 4px 1px #14e956;
+  animation: flipInY 2s ease forwards;
+}
+
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
@@ -106,12 +157,43 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
+.header {
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: var(--primary-color) ;
+}
 
+.header .wrapper {
+  align-items: center;
+  justify-content: space-between;
+}
 
+.menu-toggle {
+  display: none;
+}
 
+.logo {
+  padding: 8px 22px;
+  border-radius: 10px;
+  background-color: var(--black-color);
+  color: var(--primary-color);
+  font-size: 40px;
+  font-family: 'Russo One', sans-serif;
+}
 
-
-
+.bar {
+  width: 45px;
+  height: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+  display: block;
+  background-color: var(--white-color);
+  text-indent: -9999px;
+}
 /*=================================
   Header styling ends here
 =================================*/  
@@ -119,8 +201,237 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+/* ----------------------------------------------------- home section start ----------------------------------------------------- */
+.home {
+  padding: 100px 0 25px;
+  position: relative;
+  background: url(../images/home-bg.svg) center no-repeat;
+  background-size: cover;
+}
 
+.home::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
 
+.hero-name {
+  width: max-content;
+  padding: 8px 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background: rgba(20,233,88,.157);
+  color: #14e956;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.home .wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  flex-basis: 60%;
+  animation: fadeInLeft 2s ease forwards;
+}
+
+.hero-heading {
+  margin-bottom: 30px;
+  color: var(--white-color);
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 60px;
+  text-transform: capitalize;
+}
+
+.differ-font {
+  color: var(--primary-color);
+  font-family: 'Cyborg', sans-serif;
+}
+
+.hero-para {
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 30px;
+  opacity: .8;
+}
+
+.hero-photo {
+  animation: fadeInRight 2s ease forwards;
+}
+/* ----------------------------------------------------- home section end ----------------------------------------------------- */
+/* ----------------------------------------------------- skills section end ----------------------------------------------------- */
+.skills {
+  padding: 50px 0 90px;
+}
+
+.skill-list {
+  width: 60%;
+  padding: 8px;
+  border-radius: 15px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #0c8c34;
+  animation: jackInTheBox 2s ease forwards;
+}
+
+.skill-item {
+  height: 60px;
+  padding: 5px;
+  border-radius: 8px;
+  flex: 0 1 22%;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #021709;
+  display: flex;
+  margin: 1%;
+}
+
+.skill-name {
+  margin-left: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.skill-img {
+  width: 30px;
+  height: 30px;
+}
+/* ----------------------------------------------------- skills section end ----------------------------------------------------- */
+/* ----------------------------------------------------- portfolio section end ----------------------------------------------------- */
+
+/* ----------------------------------------------------- portfolio section end ----------------------------------------------------- */
+.work {
+  padding: 50px 0;
+}
+
+.work .wrapper {
+  width: 100%;
+  margin-top: 70px;
+  position: relative;
+}
+
+.work-bg {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.work-bg img {
+  filter: blur(7px);
+  object-fit: contain;
+}
+
+.work-list {
+  width: 52%;
+  margin: 0 auto;
+  padding: 50px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 0 0 18px 3px rgb(0 0 0 / 60%);
+  overflow: hidden;
+  color: var(--black-color);
+  display: none;
+}
+
+.work-item.active {
+  display: block;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: zoom 2s forwards;
+}
+
+.work-item figure {
+  max-width: 700px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.work-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-para {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.work-content {
+  padding: 20px;
+  background-color: var(--white-color);
+}
+
+.work-name {
+  margin-bottom: 10px;
+  color: #14e956;
+  font-family: 'Cyborg', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  text-shadow: 3px 3px 0 #1f2127, -1px -1px 0 #1f2127, 1px -1px 0 #1f2127, -1px 1px 0 #1f2127, 1px 1px 0 #1f2127;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.visit-btn {
+  padding: 3px 14px;
+  background: #fffff4;
+  border: 2px solid #1e2128;
+  border-radius: 15px;
+  color: #1e2128;
+  font-weight: 700;
+}
+
+.hand-icon {
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.hand-icon::before {
+  content: "\f0a5";
+  font-family: "FontAwesome";
+  float: left;
+  font-size: 65px;
+  color: var(--primary-color);
+  text-indent: 0;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.next-slide::before {
+  content: "\f0a4";
+  left: auto;
+  right: 5%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* .work-item:not(:first-child) {
+  display: none;
+} */
 
 
 
@@ -145,10 +456,96 @@ li {
   footer styling ends here
 =================================*/ 
 
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes flipInY {
+  0% {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
+  }
+
+40% {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-transform: perspective(400px) rotateY(-20deg);
+    transform: perspective(400px) rotateY(-20deg);
+  }
+60% {
+    opacity: 1;
+    -webkit-transform: perspective(400px) rotateY(10deg);
+    transform: perspective(400px) rotateY(10deg);
+  }
+80% {
+    -webkit-transform: perspective(400px) rotateY(-5deg);
+    transform: perspective(400px) rotateY(-5deg);
+  }
+100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
 
 
-}  
+}
