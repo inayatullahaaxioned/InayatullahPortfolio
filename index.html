@@ -2,35 +2,274 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Client</title>
-  <link rel="shortcut icon" href="favicon.ico" />
+  <title>Inayatullah | Software Developer</title>
+  <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Martian+Mono:wght@600&family=Russo+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/cyborg" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
 <body>
   <!--container start-->
   <div class="container">
     <!--header section start-->
-    <header>
-      
+    <header class="header">
+      <div class="wrapper flex">
+        <h1 class="brand-logo">
+          <a href="/" class="logo" title="Inayatullah">I</a>
+        </h1>
+        <div class="hamburger">
+          <span class="bar bar-one">Bar</span>
+          <span class="bar bar-one">Bar</span>
+          <span class="bar bar-one">Bar</span>
+        </div>
+        <div class="menu-toggle">
+          <nav class="nav">
+            <ul class="nav-list">
+              <li>
+                <a href="/" class="nav-item" title="Home">Home</a>
+              </li>
+              <li>
+                <a href="#FIXME" class="nav-item" title="Home">Work</a>
+              </li>
+              <li>
+                <a href="#FIXME" class="nav-item" title="Home">Resume</a>
+              </li>
+              <li>
+                <a href="mailto:inayatimportant@gmail.com" class="nav-item" title="Contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="#FIXME" class="social-icon github" title="Github" target="_blank" rel="noopener noreferrrer">Github</a>
+            </li>
+            <li class="social-item">
+              <a href="#FIXME" class="social-icon linkedin" title="Linkedin" target="_blank" rel="noopener noreferrrer">Linkedin</a>
+            </li>
+            <li class="social-item">
+              <a href="#FIXME" class="social-icon twitter" title="Twitter" target="_blank" rel="noopener noreferrrer">Twitter</a>
+            </li>
+            <li class="social-item">
+              <a href="#FIXME" class="social-icon telegram" title="Telegram" target="_blank" rel="noopener noreferrrer">Telegram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
-    <!--header section start-->
+    <!--header section end-->
     <!--main section start-->
     <main>
-
+      <!-- home section start  -->
+      <section class="home">
+        <div class="wrapper flex">
+          <div class="hero-content">
+            <h3 class="hero-name">Hi There! I am Inayatullah</h3>
+            <h2 class="hero-heading">A <span class="differ-font">FrontEnd Developer</span>. I Help Industry <span class="differ-font">Launch </span>And <span class="differ-font">Grow </span>Their Products</h2>
+            <p class="hero-para">I am a software engineer with more one year of experience. Recognized as a practical and effective developer, experienced in leading cross-functional teams in a time-pressured environment to complete projects in scheduled and within budget.</p>
+          </div>
+          <figure class="hero-photo">
+            <img src="assets/images/hero-image.png" alt="Hero image" class="hero-img">
+          </figure>
+        </div>
+      </section>
+      <!-- home section end  -->
+      <!-- skill section start  -->
+      <section class="skills">
+        <div class="wrapper">
+          <h3 class="heading">Skills</h3>
+          <ul class="skill-list flex">
+            <li class="skill-item flex">
+              <figure>
+                <img src="assets/images/html-5.svg" alt="Skill image" class="skill-img">
+              </figure>
+              <span class="skill-name">HTML</span>
+            </li>
+            <li class="skill-item flex">
+              <figure>
+                <img src="assets/images/css3.svg" alt="Skill image" class="skill-img">
+              </figure>
+              <span class="skill-name">CSS</span>
+            </li>
+            <li class="skill-item flex">
+              <figure>
+                <img src="assets/images/javascript.svg" alt="Skill image" class="skill-img">
+              </figure>
+              <span class="skill-name">JavaScript</span>
+            </li>
+            <li class="skill-item flex">
+              <figure>
+                <img src="assets/images/git.svg" alt="Skill image" class="skill-img">
+              </figure>
+              <span class="skill-name">Git Advanced</span>
+            </li>
+            <li class="skill-item flex">
+              <figure>
+                <img src="assets/images/microsoft-office.svg" alt="Skill image" class="skill-img">
+              </figure>
+              <span class="skill-name">MS Office</span>
+            </li>
+            <li class="skill-item flex">
+              <figure>
+                <img src="assets/images/node.svg" alt="Skill image" class="skill-img">
+              </figure>
+              <span class="skill-name">Sass</span>
+            </li>
+            <li class="skill-item flex">
+              <figure>
+                <img src="assets/images/react.svg" alt="Skill image" class="skill-img">
+              </figure>
+              <span class="skill-name">React JS</span>
+            </li>
+            <li class="skill-item flex">
+              <figure>
+                <img src="assets/images/node-js.svg" alt="Skill image" class="skill-img">
+              </figure>
+              <span class="skill-name">Node JS</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- skill section end  -->
+      <!-- work section start  -->
+      <section class="work">
+          <h3 class="heading">Portfolio</h3>
+          <div class="wrapper">
+            <figure class="work-bg">
+                <img src="assets/images/hexashop.jpg" alt="Background image">
+            </figure>
+            <ul class="work-list">
+                <li class="work-item active">
+                  <figure>
+                    <img src="assets/images/hexashop.jpg" alt="Work image" class="work-img">
+                  </figure>
+                  <div class="work-content">
+                    <h5 class="work-name">HexaShop</h5>
+                    <p class="work-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis doloremque esse rerum sapiente autem suscipit?
+                    </p>
+                    <div class="visit-cta">
+                      <a href="#FIXME" class="visit-btn" title="Visit" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="work-item">
+                  <figure>
+                    <img src="assets/images/klassy-cafe.jpg" alt="Work image" class="work-img">
+                  </figure>
+                  <div class="work-content">
+                    <h5 class="work-name">Klassy Cafe</h5>
+                    <p class="work-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis doloremque esse rerum sapiente autem suscipit?
+                    </p>
+                    <div class="visit-cta">
+                      <a href="#FIXME" class="visit-btn" title="Visit" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="work-item">
+                  <figure>
+                    <img src="assets/images/kind-heart-charity.jpg" alt="Work image" class="work-img">
+                  </figure>
+                  <div class="work-content">
+                    <h5 class="work-name">Kind Heart Charity</h5>
+                    <p class="work-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis doloremque esse rerum sapiente autem suscipit?
+                    </p>
+                    <div class="visit-cta">
+                      <a href="#FIXME" class="visit-btn" title="Visit" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="work-item">
+                  <figure>
+                    <img src="assets/images/infinite-loop.jpg" alt="Work image" class="work-img">
+                  </figure>
+                  <div class="work-content">
+                    <h5 class="work-name">Infinite Loop</h5>
+                    <p class="work-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis doloremque esse rerum sapiente autem suscipit?
+                    </p>
+                    <div class="visit-cta">
+                      <a href="#FIXME" class="visit-btn" title="Visit" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="work-item">
+                  <figure>
+                    <img src="assets/images/leadership-event.jpg" alt="Work image" class="work-img">
+                  </figure>
+                  <div class="work-content">
+                    <h5 class="work-name">LeaderShip Events</h5>
+                    <p class="work-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis doloremque esse rerum sapiente autem suscipit?
+                    </p>
+                    <div class="visit-cta">
+                      <a href="#FIXME" class="visit-btn" title="Visit" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="work-item">
+                  <figure>
+                    <img src="assets/images/eatery.jpg" alt="Work image" class="work-img">
+                  </figure>
+                  <div class="work-content">
+                    <h5 class="work-name">Eatery Cafe</h5>
+                    <p class="work-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis doloremque esse rerum sapiente autem suscipit?
+                    </p>
+                    <div class="visit-cta">
+                      <a href="#FIXME" class="visit-btn" title="Visit" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+            <div class="slider-cta">
+                <a href="#FIXME" class="hand-icon prev-slide" title="Previous Work">Prev Hand Icon</a>
+                <a href="#FIXME" class="hand-icon next-slide" title="Next Work">Next Hand Icon</a>
+            </div>
+        </div>
+      </section>
+      <!-- work section end  -->
+      <!-- quote section start  -->
+      <div class="quote-section">
+        <div class="wrapper">
+          <p class="quote">In order to be irreplaceable, one must always be different.</p>
+        </div>
+      </div>
+      <!-- quote section end  -->
+      <!-- contact section start  -->
+      <section class="contact">
+        <div class="wrapper">
+          <h3 class="heading">Connect With Me</h3>
+          <div class="social-container">
+            <ul class="conact-social">
+              <li>
+                <a href="#FIXME" class="contact-social-icon github" title="Github" target="_blank" rel="noopener noreferrer">Github</a>
+              </li>
+              <li>
+                <a href="#FIXME" class="contact-social-icon linkedin" title="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </li>
+              <li>
+                <a href="#FIXME" class="contact-social-icon twitter" title="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
+              </li>
+              <li>
+                <a href="#FIXME" class="contact-social-icon telegram" title="Telegram" target="_blank" rel="noopener noreferrer">Telegram</a>
+              </li>
+            </ul>
+            <div class="shoot-mail">
+              <a href="mailto:inayatimportant@gmail.com" class="mail-btn" title="Shoot Me A Mail">Shoot Me A Mail</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact section end  -->
     </main>
     <!--main section end-->
-
-    <!--footer section start-->
-    <footer>      
-
-    </footer>
-    <!--footer section end-->
-
+     <!--footer section start-->
+     <footer class="footer">
+        <div class="wrapper">
+          <p class="copyright">Built from scratch With <span class="heart-icon">Heart Icon</span> &copy; Copyright 2022, Inayatullah.com. All Rights Reserved</p>
+        </div>
+      </footer>
+      <!--footer section end-->
   </div>
   <!--container end-->
-
-<script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
