@@ -149,6 +149,15 @@ html.scroll-lock {
 body {
   background-color: var(--black-color);
   color: var(--white-color);
+  cursor: url(../images/arrowPoint.5b3f3b5c07736388f143.svg) 15 15, move;
+}
+
+a[href],
+button,
+input[type=checkbox],
+input[type=submit],
+label[for], select {
+  cursor: url(../images/arrowClick.7219a884818048edacbe.svg) 15 15, move;
 }
 
 .heading {
@@ -735,7 +744,6 @@ body {
     .contact-social-icon:hover,
     .mail-btn:hover {
       opacity: 0.8;
-      background-color: #fff;
     }
 
     .send-btn:hover {
