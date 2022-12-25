@@ -12,7 +12,7 @@ let index = 0;
 function setSlide(index) {
     const toggle = document.querySelector(".active"),
         workImage = listImage[index].src;
-        backBg.src = workImage;
+    backBg.src = workImage;
     toggle.classList.remove("active");
     workItem[index].classList.add("active");
 };
@@ -37,31 +37,34 @@ nextSlide.addEventListener("click", function () {
 
 //hamburger js start
 const hamburger = document.querySelector(".hamburger"),
+    html = document.querySelector('html'),
     menuToggle = document.querySelector('.menu-toggle');
 
-hamburger.addEventListener('click', function() {
+hamburger.addEventListener('click', function () {
     hamburger.classList.toggle('active');
     menuToggle.classList.toggle('active');
+    html.classList.toggle('scroll-lock');
 });
 //hamburger js end
 
+//animation observer start 
+const sections = document.querySelectorAll("section");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+sections.forEach(function (section) {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const animation = section.querySelectorAll('.anime');
+            if (entry.isIntersecting) {
+                animation.forEach(function (element) {
+                    element.classList.add('animation');
+                });
+            } else {
+                animation.forEach(function (element) {
+                    element.classList.remove('animation');
+                });
+            }
+        })
+    });
+    observer.observe(section);
+});
+//animation observer end
