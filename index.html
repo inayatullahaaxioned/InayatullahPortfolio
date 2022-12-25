@@ -21,8 +21,8 @@
         </h1>
         <div class="hamburger">
           <span class="bar bar-one">Bar</span>
-          <span class="bar bar-one">Bar</span>
-          <span class="bar bar-one">Bar</span>
+          <span class="bar bar-two">Bar</span>
+          <span class="bar bar-three">Bar</span>
         </div>
         <div class="menu-toggle">
           <nav class="nav">
@@ -31,28 +31,28 @@
                 <a href="/" class="nav-item" title="Home">Home</a>
               </li>
               <li>
-                <a href="#FIXME" class="nav-item" title="Home">Work</a>
+                <a href="#FIXME" class="nav-item" title="Skills">Skills</a>
               </li>
               <li>
-                <a href="#FIXME" class="nav-item" title="Home">Resume</a>
+                <a href="#FIXME" class="nav-item" title="Work">Work</a>
               </li>
               <li>
-                <a href="mailto:inayatimportant@gmail.com" class="nav-item" title="Contact">Contact</a>
+                <a href="#FIXME" class="nav-item" title="Contact">Contact</a>
               </li>
             </ul>
           </nav>
-          <ul class="social-list">
-            <li class="social-item">
-              <a href="#FIXME" class="social-icon github" title="Github" target="_blank" rel="noopener noreferrrer">Github</a>
+          <ul class="social-list flex">
+            <li class="social-item github">
+              <a href="#FIXME" class="contact-social-icon github" title="Github" target="_blank" rel="noopener noreferrrer">Github</a>
             </li>
-            <li class="social-item">
-              <a href="#FIXME" class="social-icon linkedin" title="Linkedin" target="_blank" rel="noopener noreferrrer">Linkedin</a>
+            <li class="social-item linkedin">
+              <a href="#FIXME" class="contact-social-icon linkedin" title="Linkedin" target="_blank" rel="noopener noreferrrer">Linkedin</a>
             </li>
-            <li class="social-item">
-              <a href="#FIXME" class="social-icon twitter" title="Twitter" target="_blank" rel="noopener noreferrrer">Twitter</a>
+            <li class="social-item twitter">
+              <a href="#FIXME" class="contact-social-icon twitter" title="Twitter" target="_blank" rel="noopener noreferrrer">Twitter</a>
             </li>
-            <li class="social-item">
-              <a href="#FIXME" class="social-icon telegram" title="Telegram" target="_blank" rel="noopener noreferrrer">Telegram</a>
+            <li class="social-item telegram">
+              <a href="#FIXME" class="contact-social-icon telegram" title="Telegram" target="_blank" rel="noopener noreferrrer">Telegram</a>
             </li>
           </ul>
         </div>
@@ -62,7 +62,7 @@
     <!--main section start-->
     <main>
       <!-- home section start  -->
-      <section class="home">
+      <section class="home" id="home">
         <div class="wrapper flex">
           <div class="hero-content">
             <h3 class="hero-name">Hi There! I am Inayatullah</h3>
@@ -76,7 +76,7 @@
       </section>
       <!-- home section end  -->
       <!-- skill section start  -->
-      <section class="skills">
+      <section class="skills" id="skills">
         <div class="wrapper">
           <h3 class="heading">Skills</h3>
           <ul class="skill-list flex">
@@ -133,7 +133,7 @@
       </section>
       <!-- skill section end  -->
       <!-- work section start  -->
-      <section class="work">
+      <section class="work" id="work">
           <h3 class="heading">Portfolio</h3>
           <div class="wrapper">
             <figure class="work-bg">
@@ -229,16 +229,18 @@
       <!-- quote section start  -->
       <div class="quote-section">
         <div class="wrapper">
-          <p class="quote">In order to be irreplaceable, one must always be different.</p>
+          <div class="quote-box">
+            <p class="quote">In order to be irreplaceable, one must always be different!</p>
+          </div>
         </div>
       </div>
       <!-- quote section end  -->
       <!-- contact section start  -->
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="wrapper">
           <h3 class="heading">Connect With Me</h3>
           <div class="social-container">
-            <ul class="conact-social">
+            <ul class="contact-social flex">
               <li>
                 <a href="#FIXME" class="contact-social-icon github" title="Github" target="_blank" rel="noopener noreferrer">Github</a>
               </li>
@@ -253,7 +255,7 @@
               </li>
             </ul>
             <div class="shoot-mail">
-              <a href="mailto:inayatimportant@gmail.com" class="mail-btn" title="Shoot Me A Mail">Shoot Me A Mail</a>
+              <a href="mailto:inayatimportant@gmail.com" class="mail-btn flex" title="Shoot Me A Mail">Shoot Me A Mail</a>
             </div>
           </div>
         </div>
@@ -264,7 +266,7 @@
      <!--footer section start-->
      <footer class="footer">
         <div class="wrapper">
-          <p class="copyright">Built from scratch With <span class="heart-icon">Heart Icon</span> &copy; Copyright 2022, Inayatullah.com. All Rights Reserved</p>
+          <p class="copyright flex">Built from scratch With <span class="heart-icon">Heart Icon</span> &copy; Copyright 2022, Inayatullah.com. All Rights Reserved</p>
         </div>
       </footer>
       <!--footer section end-->
