@@ -108,11 +108,11 @@ li {
 
 @font-face{
   font-family:Cyborg;
-  src:local("Cyborg"), url(../robotic-cyborg/Robotic\ Cyborg.ttf) format("truetype")
+  src:local("Cyborg"), url(../robotic-cyborg/Robotic\ Cyborg.ttf) format("truetype");
 }
 @font-face{
   font-family:ExoSpace;
-  src:local("ExoSpace"), url(../robotic-cyborg/Exo-Space-DEMO.ttf) format("truetype")
+  src:local("ExoSpace"), url(../robotic-cyborg/Exo-Space-DEMO.ttf) format("truetype");
 }
 
 :root {
@@ -206,6 +206,7 @@ body {
 
 .nav-item {
   margin: 10px 20px;
+  border-bottom: 2px solid transparent;
   color: #f5f5f5;
   font-size: 25px;
   font-family: Cyborg;
@@ -213,6 +214,11 @@ body {
   letter-spacing: 3px;
   text-decoration: none;
   text-shadow: 3px 3px 0 #14e956, -1px -1px 0 #14e956, 1px -1px 0 #14e956, -1px 1px 0 #14e956, 1px 1px 0 #14e956;
+  transition: all .3s ease-in-out;
+}
+
+.nav-item.active {
+  border-color: var(--white-color);
 }
 /*=================================
   Header styling ends here
@@ -440,6 +446,7 @@ body {
   border-radius: 15px;
   color: #1e2128;
   font-weight: 700;
+  transition: all .3s ease-in-out;
 }
 
 .hand-icon {
@@ -458,6 +465,7 @@ body {
   top: 50%;
   left: 5%;
   transform: translateY(-50%) rotate(45deg);
+  transition: all .3s ease-in-out;
 }
 
 .next-slide::before {
@@ -545,6 +553,7 @@ body {
   color: #d6d6d6;
   font-size: 45px;
   font-weight: 600;
+  transition: all .3s ease-in-out;
 }
 
 .contact-social-icon::after {
@@ -593,6 +602,7 @@ body {
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
+  transition: all .3s ease-in-out;
 }
 
 .mail-btn::after {
@@ -636,7 +646,38 @@ body {
 
  /*=================================
   footer styling ends here
-=================================*/
+  =================================*/
+  /*------------------------------------- media query for desktop hover  starts here* -------------------------------------*/
+  @media only screen and (min-width: 996px){
+    .nav-item:hover {
+      border-color: var(--white-color);
+    }
+
+    .visit-btn:hover {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+      background: #454545;
+    }
+
+    .hand-icon:hover:before {
+      scale: 1.05;
+    }
+
+    .contact-social-icon:hover,
+    .mail-btn:hover {
+      opacity: 0.8;
+    }
+
+    .nav-item:hover,
+    .visit-btn:hover,
+    .hand-icon:hover:before,
+    .contact-social-icon:hover,
+    .mail-btn:hover {
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  /*------------------------------------- media query for desktop hover ends here* -------------------------------------*/
 /*media query starts*/
 /*------------------------------------- media query for 995px starts here* -------------------------------------*/
 @media only screen and (max-width: 995px){
@@ -665,7 +706,9 @@ body {
   }
 
   .menu-toggle.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -675,7 +718,7 @@ body {
   }
 
   .menu-toggle.active .nav-list {
-    margin: 20px 0;
+    margin: 20px 0 80px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -775,7 +818,7 @@ body {
     font-size: 16px;
   }
 }
-/*------------------------------------- media query for 995px starts here* -------------------------------------*/
+/*------------------------------------- media query for 995px ends here* -------------------------------------*/
 /*------------------------------------- media query for 768px starts here* -------------------------------------*/
 @media only screen and (max-width:768px) {
 
@@ -909,7 +952,7 @@ body {
   }
 }
 /*------------------------------------- media query for 480x ends here* -------------------------------------*/
-/*------------------------------------- media query for 375px ends here* -------------------------------------*/
+/*------------------------------------- media query for 375px starts here* -------------------------------------*/
 
 /*------------------------------------- media query for 375pxx ends here* -------------------------------------*/
 @media only screen and (max-width: 375px) {
