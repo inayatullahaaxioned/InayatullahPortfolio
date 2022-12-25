@@ -1,6 +1,30 @@
 /* Author: 
 Inayatullah
 */
+//preloader js 
+const loader = document.createElement('div'),
+    loadingText = document.createElement('div'),
+    container = document.querySelector('.container'),
+    body = document.querySelector('body');
+body.prepend(loader);
+loader.appendChild(loadingText);
+loader.className = "loading";
+loadingText.className = "loading-text-word";
+preloader();
+function preloader() {
+    let Inayat = ['I', 'N', 'A', 'Y', 'A', 'T', 'U', 'L', 'L', 'A', 'H'];
+    Inayat.forEach(element => {
+        let span = document.createElement('span');
+        span.className = 'loading-text-words';
+        span.innerText = element;
+        loadingText.appendChild(span);
+        $(window).on('load', function(){
+            $('.loading').delay(3000).fadeOut('slow');
+            $('.container').delay(5000).fadeIn('slow');
+        });
+    });
+}
+//preloader js ends 
 const workItem = document.querySelectorAll(".work-item"),
     prevSlide = document.querySelector(".prev-slide"),
     backBg = document.querySelector(".work-bg img"),
@@ -123,3 +147,58 @@ window.onscroll = function () {
     };
 }
 // on scroll navmenu active change
+
+//form validation
+const form = document.querySelector('.form'),
+    fullName = document.querySelector('input[type=text]'),
+    email = document.querySelector('input[type=email]'),
+    message = document.querySelector('.message'),
+    fullNameRegex = /^[a-zA-Z]+[a-zA-Z\s]+$/,
+    emailRegex = /^([A-Za-z][A-Za-z0-9\-\_\.]+[A-Za-z0-9])\@([A-Za-z]{2,})\.([A-Za-z]{2,})$/,
+    messageRegex = /./;
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    validateInput(fullName, fullNameRegex);
+    validateInput(email, emailRegex, 5, 40);
+    validateInput(message, messageRegex, 10, 250);
+    const errors = form.querySelectorAll('.error');
+    if (errors.length == 0) {
+        const successMessage = document.createElement('span');
+        successMessage.className = "success-msg";
+        successMessage.innerText = 'Your Message Has Been Sent Successfully!';
+        form.prepend(successMessage);
+        setTimeout(function () {
+            successMessage.remove();
+        }, 4000);
+        form.reset();
+    };
+});
+
+
+//universal function for validating inputs
+function validateInput(input, regex, minLimit = 3, maxLimit = 20) {
+    const error = input.parentElement.querySelector('.error'),
+        inputValue = input.value.trim();
+    if (error) {
+        error.remove();
+    }
+    if (inputValue == "") {
+        appendError(input, `${input.name} is required`);
+    } else if (inputValue.length < minLimit) {
+        appendError(input, `minimum ${minLimit} character is required`);
+    } else if (inputValue.length > maxLimit) {
+        appendError(input, `maximum ${maxLimit} characters are allowed`);
+    } else if (!regex.test(inputValue)) {
+        appendError(input, `Please Enter valid ${input.name}`);
+    }
+}
+
+//append error function
+function appendError(input, errorMsg) {
+    const inputParent = input.parentElement,
+        errorSpan = document.createElement('span');
+    errorSpan.className = "error";
+    errorSpan.innerText = errorMsg;
+    inputParent.appendChild(errorSpan);
+};
