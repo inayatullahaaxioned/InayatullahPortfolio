@@ -9,12 +9,13 @@ const workItem = document.querySelectorAll(".work-item"),
 let index = 0;
 // global variable declaration end here
 // slider function start here
+workItem[0].classList.add('show');
 function setSlide(index) {
-    const toggle = document.querySelector(".active"),
+    const toggle = document.querySelector(".show"),
         workImage = listImage[index].src;
     backBg.src = workImage;
-    toggle.classList.remove("active");
-    workItem[index].classList.add("active");
+    toggle.classList.remove("show");
+    workItem[index].classList.add("show");
 };
 // slider function end here
 
@@ -48,9 +49,9 @@ hamburger.addEventListener('click', function () {
 //hamburger js end
 
 //animation observer start 
-const sections = document.querySelectorAll(".animation-section");
+const animationSections = document.querySelectorAll(".animation-section");
 
-sections.forEach(function (section) {
+animationSections.forEach(function (section) {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             const animation = section.querySelectorAll('.anime');
@@ -68,3 +69,57 @@ sections.forEach(function (section) {
     observer.observe(section);
 });
 //animation observer end
+
+
+
+//navigation js start
+const mobileMenu = document.querySelector('.menu-toggle'),
+    sections = document.querySelectorAll('section'),
+    navigation = document.querySelectorAll('.nav-item');
+
+navigation.forEach(function (navMenu) {
+    navMenu.addEventListener('click', function (e) {
+        e.preventDefault();
+        const activeNav = mobileMenu.querySelector('.active');
+        if (activeNav) {
+            activeNav.classList.remove('active');
+        }
+        mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        html.classList.remove('scroll-lock');
+        navMenu.classList.add('active');
+        const sectionUrl = navMenu.getAttribute('href');
+        sections.forEach(function (section) {
+            const sectionId = section.getAttribute('id');
+            if (sectionId == sectionUrl.replace("#", "")) {
+                const sectionTop = section.getBoundingClientRect().top;
+                window.scrollBy({
+                    top: sectionTop - 40,
+                    behavior: "smooth"
+                })
+            }
+        });
+    });
+});
+//navigation js ends
+
+// on scroll navmenu active change 
+window.onscroll = function () {
+    let attribute;
+    sections.forEach(function (section) {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 50) {
+            attribute = section.getAttribute('id');
+        }
+    });
+    navigation.forEach(function (item) {
+        item.classList.remove('active');
+        if (item.getAttribute('href').replace('#', "") == attribute) {
+            item.classList.add('active');
+        }
+    });
+    if (scrollY <= 100) {
+        navigation[0].classList.add('active');
+    };
+}
+// on scroll navmenu active change
