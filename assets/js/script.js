@@ -48,7 +48,7 @@ hamburger.addEventListener('click', function () {
 //hamburger js end
 
 //animation observer start 
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll(".animation-section");
 
 sections.forEach(function (section) {
     const observer = new IntersectionObserver(entries => {
