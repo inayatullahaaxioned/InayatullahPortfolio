@@ -35,7 +35,15 @@ nextSlide.addEventListener("click", function () {
 });
 // event for slider end here
 
+//hamburger js start
+const hamburger = document.querySelector(".hamburger"),
+    menuToggle = document.querySelector('.menu-toggle');
 
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+});
+//hamburger js end
 
 
 
