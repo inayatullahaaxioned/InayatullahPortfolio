@@ -121,6 +121,22 @@ li {
   --white-color: #fff;
 }
 
+/* custom scroll bar design  */
+::-webkit-scrollbar-thumb {
+  border: 2px solid #fdfdfd;
+  background-color: rgb(20, 233, 86);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(232, 253, 238);
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* custom scroll bar design  */
 /* common styling  */
 html.scroll-lock {
   overflow: hidden;
@@ -398,7 +414,7 @@ body {
   display: none;
 }
 
-.work-item.active {
+.work-item.show {
   display: block;
   transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: zoom 2s forwards;
@@ -535,6 +551,59 @@ body {
   border: none;
 }
 
+.form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  outline: none;
+  resize: none;
+}
+
+.input-box input.animation {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.input-box textarea.animation {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.input-box textarea {
+  padding: 10px;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+  color: var(--white-color);
+  font-size: 14px;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 8px 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin: 15px 0;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 20px;
+  font-family: Cyborg;
+  text-transform: uppercase;
+}
+
+.send-btn.animation {
+  animation: fadeInRight 1s ease forwards;
+}
+
 .contact-social li {
   flex-basis: 25%;
 }
@@ -666,13 +735,21 @@ body {
     .contact-social-icon:hover,
     .mail-btn:hover {
       opacity: 0.8;
+      background-color: #fff;
+    }
+
+    .send-btn:hover {
+      background-color: transparent;
+      border-color: var(--primary-color);
+      color: var(--primary-color);
     }
 
     .nav-item:hover,
     .visit-btn:hover,
     .hand-icon:hover:before,
     .contact-social-icon:hover,
-    .mail-btn:hover {
+    .mail-btn:hover,
+    .send-btn:hover {
       transition: all .3s ease-in-out;
     }
   }
@@ -927,6 +1004,14 @@ body {
   .work-para {
     font-size: 12px;
     line-height: 18px;
+  }
+
+  .form {
+    width: 80%;
+  }
+
+  .send-btn {
+    font-size: 15px;
   }
 
   .contact-social li {
