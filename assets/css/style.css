@@ -176,9 +176,9 @@ label[for], select {
   font-size: 22px;
   font-family: Cyborg;
   font-weight: 900;
+  letter-spacing: 3px;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   text-transform: uppercase;
-  letter-spacing: 3px;
   -webkit-box-shadow: inset 0 0 4px 1px #14e956;
           box-shadow: inset 0 0 4px 1px #14e956;
 }
@@ -198,12 +198,12 @@ label[for], select {
   Header styling starts here
 =================================*/
 .header {
+  width: 100%;
   padding: 10px;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100%;
   background-color: var(--primary-color) ;
 }
 
@@ -320,6 +320,7 @@ label[for], select {
 }
 
 .hero-content {
+  margin: 80px 0 40px;
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
 }
@@ -531,13 +532,13 @@ label[for], select {
 .hand-icon::before {
   content: "\f0a5";
   font-family: "FontAwesome";
-  float: left;
-  font-size: 65px;
-  color: var(--primary-color);
-  text-indent: 0;
   position: absolute;
   top: 50%;
   left: 5%;
+  color: var(--primary-color);
+  float: left;
+  font-size: 65px;
+  text-indent: 0;
   -webkit-transform: translateY(-50%) rotate(45deg);
       -ms-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
@@ -629,8 +630,8 @@ label[for], select {
   border: 1px solid var(--primary-color);
   border-radius: 8px;
   margin-bottom: 20px;
-  color: var(--white-color);
   background-color: var(--black-color);
+  color: var(--white-color);
   outline: none;
   resize: none;
 }
@@ -700,8 +701,8 @@ label[for], select {
 
 .contact-social-icon {
   width: 100%;
-  padding: 0 20px;
   height: 100px;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -793,10 +794,10 @@ label[for], select {
 
 .error {
   position: absolute;
-  left: 0;
   bottom: 0px;
-  font-size: 14px;
+  left: 0;
   color: red;
+  font-size: 14px;
 }
 
 .success-msg {
@@ -808,6 +809,126 @@ label[for], select {
   color: var(--primary-color);
 }
 /* ----------------------------------------------------- contact section end ----------------------------------------------------- */
+/*------------------------------------- preloader css starts here* -------------------------------------*/
+.loading {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center; 
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #000;
+  z-index: 9999;
+}
+
+span.loading-text-words {
+  margin: 0 5px;
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: 50px;
+  font-weight: 900;
+  font-family:  Cyborg;
+}
+
+.loading-text-word {
+  width: max-content;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.loading-text-words:nth-child(1) {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-animation: blur-text 1s .2s infinite linear alternate;
+            animation: blur-text 1s .2s infinite linear alternate;
+}
+.loading-text-words:nth-child(2) {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-animation: blur-text 1s .4s infinite linear alternate;
+            animation: blur-text 1s .4s infinite linear alternate;
+}
+.loading-text-words:nth-child(3) {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-animation: blur-text 1s .6s infinite linear alternate;
+            animation: blur-text 1s .6s infinite linear alternate;
+}
+.loading-text-words:nth-child(4) {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-animation: blur-text 1s .8s infinite linear alternate;
+            animation: blur-text 1s .8s infinite linear alternate;
+}
+.loading-text-words:nth-child(5) {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-animation: blur-text 1s 1s infinite linear alternate;
+            animation: blur-text 1s 1s infinite linear alternate;
+}
+.loading-text-words:nth-child(6) {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-animation: blur-text 1s 1.2s infinite linear alternate;
+            animation: blur-text 1s 1.2s infinite linear alternate;
+}
+.loading-text-words:nth-child(7) {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-animation: blur-text 1s 1.4s infinite linear alternate;
+            animation: blur-text 1s 1.4s infinite linear alternate;
+}
+.loading-text-words:nth-child(8) {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-animation: blur-text 1s 1.6s infinite linear alternate;
+            animation: blur-text 1s 1.6s infinite linear alternate;
+}
+.loading-text-words:nth-child(9) {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-animation: blur-text 1s 1.8s infinite linear alternate;
+            animation: blur-text 1s 1.8s infinite linear alternate;
+}
+.loading-text-words:nth-child(10) {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-animation: blur-text 1s 2s infinite linear alternate;
+            animation: blur-text 1s 2s infinite linear alternate;
+}
+.loading-text-words:nth-child(11) {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-animation: blur-text 1s 2.2s infinite linear alternate;
+            animation: blur-text 1s 2.2s infinite linear alternate;
+}
+
+@-webkit-keyframes blur-text {
+  0% {-webkit-filter: blur(0px);filter: blur(0px);}
+  100% {
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+}
+
+@keyframes blur-text {
+  0% {-webkit-filter: blur(0px);filter: blur(0px);}
+  100% {
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+}
+/*------------------------------------- preloader css ends here* -------------------------------------*/
 /*=================================
   main styling ends here
 =================================*/
@@ -1020,33 +1141,13 @@ label[for], select {
             flex-direction: column;
   }
 
-  .skill-list {
-    width: 90%;
-  }
-
-  .work-list {
-    width: 60%;
-  }
-
-  .work-list figure {
-    max-height: 300px;
-  }
-
-  .work-para {
-    font-size: 15px;
-  }
-
-  .hand-icon::before {
-    font-size: 55px;
-  }
-
-  .quote-box {
-    width: 80%;
-  }
-  
-  .quote {
-    font-size: 25px;
-  }
+  .skill-list { width: 90%; }
+  .work-list { width: 60%; }
+  .work-list figure { max-height: 300px; }
+  .work-para { font-size: 15px; }
+  .hand-icon::before { font-size: 55px; }
+  .quote-box { width: 80%; }
+  .quote { font-size: 25px; }
 
   .contact-social {
     -ms-flex-wrap: wrap;
@@ -1068,26 +1169,17 @@ label[for], select {
     margin: 0 2px;
     font-size: 16px;
   }
+
+  .loading-text { height: 70px; }
+  span.loading-text-words { font-size: 25px; }
 }
 /*------------------------------------- media query for 995px ends here* -------------------------------------*/
 /*------------------------------------- media query for 768px starts here* -------------------------------------*/
 @media only screen and (max-width:768px) {
-
-  .contact-social-icon {
-    font-size: 30px;
-  }
-
-  .contact-social-icon::after {
-    font-size: 35px;
-  }
-
-  .hero-heading {
-    font-size: 42px;
-  }
-
-  .skills {
-    padding: 50px 0;
-  }
+  .contact-social-icon { font-size: 30px; }
+  .contact-social-icon::after { font-size: 35px; }
+  .hero-heading { font-size: 42px; }
+  .skills { padding: 50px 0; }
 
   .skill-list {
     width: 100%;
@@ -1102,9 +1194,7 @@ label[for], select {
             flex: 0 1 30%;
   }
 
-  .work-list {
-    width: 75%;
-  }
+  .work-list { width: 75%; }
 
   .next-slide::before {
     font-size: 45px;
@@ -1116,27 +1206,19 @@ label[for], select {
     left: 2%;
   }
 
-  .quote-section {
-    padding: 70px 0;
-  }
-
-  .quote-box {
-    width: 100%;
-  }
-
-  .mail-btn {
-    font-size: 25px;
-  }
-
-  .heart-icon {
-    display: none;
-  }
+  .quote-section { padding: 70px 0; }
+  .quote-box { width: 100%; }
+  .mail-btn { font-size: 25px; }
+  .heart-icon { display: none; }
 }
 /*------------------------------------- media query for 768px ends here* -------------------------------------*/
 /*------------------------------------- media query for 480px starts here* -------------------------------------*/
 @media only screen and (max-width: 480px) {
-  .heading {
-    font-size: 20px;
+  .heading { font-size: 20px; }
+
+  .contact .heading,
+  .hero-name {
+    font-size: 15px;
   }
 
   .logo {
@@ -1177,26 +1259,16 @@ label[for], select {
             transform: translateY(-10px) rotate(-45deg);
   }
 
-  .work-item figure {
-    max-height: 225px;
-  }
-
-  .work-name {
-    font-size: 22px;
-  }
+  .work-item figure { max-height: 225px; }
+  .work-name { font-size: 22px; }
 
   .work-para {
     font-size: 12px;
     line-height: 18px;
   }
 
-  .form {
-    width: 80%;
-  }
-
-  .send-btn {
-    font-size: 15px;
-  }
+  .form { width: 80%; }
+  .send-btn { font-size: 15px; }
 
   .contact-social li {
     -ms-flex-preferred-size: 100%;
@@ -1208,166 +1280,26 @@ label[for], select {
     font-size: 25px;
   }
 
-  .mail-btn {
-    font-size: 18px;
-  }
+  .mail-btn { font-size: 18px; }
 
   .copyright {
     font-size: 13px;
     line-height: 18px;
   }
 
-  .quote {
-    font-size: 20px;
-  }
-
-  .success-msg {
-    font-size: 14px;
-  }
+  .quote { font-size: 20px; }
+  .success-msg { font-size: 14px; }
 }
 /*------------------------------------- media query for 480x ends here* -------------------------------------*/
 /*------------------------------------- media query for 375px starts here* -------------------------------------*/
 
 /*------------------------------------- media query for 375pxx starts here* -------------------------------------*/
 @media only screen and (max-width: 375px) {
-  .work-list {
-    width: 90%;
-  }
-  
-  .quote-section {
-    padding: 40px 0;
-  }
+  .heading { font-size: 16px; }
+  .work-list { width: 90%; }
+  .quote-section { padding: 40px 0; }
 }
 /*------------------------------------- media query for 375pxx ends here* -------------------------------------*/
-/*------------------------------------- preloader css starts here* -------------------------------------*/
-.loading {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #000;
-  z-index: 9999;
-}
-
-span.loading-text-words {
-  color: var(--primary-color);
-  font-size: 50px;
-  font-weight: 900;
-}
-
-.loading-text {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-  width: 100%;
-  height: 100px;
-  line-height: 100px;
-}
-
-.loading-text-words {
-  display: inline-block;
-  margin: 0 5px;
-  color: #fff;
-  font-family:  Cyborg;
-}
-
-.loading-text-words:nth-child(1) {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    -webkit-animation: blur-text 1s .2s infinite linear alternate;
-            animation: blur-text 1s .2s infinite linear alternate;
-}
-.loading-text-words:nth-child(2) {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    -webkit-animation: blur-text 1s .4s infinite linear alternate;
-            animation: blur-text 1s .4s infinite linear alternate;
-}
-.loading-text-words:nth-child(3) {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    -webkit-animation: blur-text 1s .6s infinite linear alternate;
-            animation: blur-text 1s .6s infinite linear alternate;
-}
-.loading-text-words:nth-child(4) {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    -webkit-animation: blur-text 1s .8s infinite linear alternate;
-            animation: blur-text 1s .8s infinite linear alternate;
-}
-.loading-text-words:nth-child(5) {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    -webkit-animation: blur-text 1s 1s infinite linear alternate;
-            animation: blur-text 1s 1s infinite linear alternate;
-}
-.loading-text-words:nth-child(6) {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    -webkit-animation: blur-text 1s 1.2s infinite linear alternate;
-            animation: blur-text 1s 1.2s infinite linear alternate;
-}
-.loading-text-words:nth-child(7) {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    -webkit-animation: blur-text 1s 1.4s infinite linear alternate;
-            animation: blur-text 1s 1.4s infinite linear alternate;
-}
-.loading-text-words:nth-child(8) {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    -webkit-animation: blur-text 1s 1.6s infinite linear alternate;
-            animation: blur-text 1s 1.6s infinite linear alternate;
-}
-.loading-text-words:nth-child(9) {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    -webkit-animation: blur-text 1s 1.8s infinite linear alternate;
-            animation: blur-text 1s 1.8s infinite linear alternate;
-}
-.loading-text-words:nth-child(10) {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    -webkit-animation: blur-text 1s 2s infinite linear alternate;
-            animation: blur-text 1s 2s infinite linear alternate;
-}
-.loading-text-words:nth-child(11) {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    -webkit-animation: blur-text 1s 2.2s infinite linear alternate;
-            animation: blur-text 1s 2.2s infinite linear alternate;
-}
-
-@-webkit-keyframes blur-text {
-  0% {-webkit-filter: blur(0px);filter: blur(0px);}
-  100% {
-    -webkit-filter: blur(4px);
-            filter: blur(4px);
-  }
-}
-
-@keyframes blur-text {
-  0% {-webkit-filter: blur(0px);filter: blur(0px);}
-  100% {
-    -webkit-filter: blur(4px);
-            filter: blur(4px);
-  }
-}
-/*------------------------------------- preloader css ends here* -------------------------------------*/
 
  /*=================================
   animations  starts here
